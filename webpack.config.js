@@ -1,16 +1,25 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: "production",
+    mode: "development",
     entry: "./src/index.js",
     output: {
-        filename: "main.js",
-        path: path.resolve(__dirname, 'assets/js')
+        filename: "main.[contenthash].js",
+        path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename: './[name].[hash][ext][query]',
+        clean: true,
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: "./src/template.html",
+            favicon: "./src/img/favicon.png",
+            inject: "body"
+        }),
         new MiniCssExtractPlugin({
-            filename: '../css/main.css'
+            filename: './main.[contenthash].css'
         })
     ],
     module: {
@@ -28,7 +37,12 @@ module.exports = {
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: "",
+                        },
+                    },
                     { loader: 'css-loader', options: { importLoaders: 1 } },
                     {
                         loader: 'postcss-loader',
@@ -44,6 +58,14 @@ module.exports = {
                     },
                     'sass-loader',
                 ]
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg|webp)$/i,
+                type: 'asset/resource'
+            },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
             }
         ]
     }

@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/main.scss */ \"./src/css/main.scss\");\n\n\nfunction getVowels(str) {\n  var result = str.match(/[aeiou]/gi) || [];\n  var repeatedVowel = {};\n  var sortVowel = result.sort();\n  sortVowel.forEach(function (number) {\n    return repeatedVowel[number] = (repeatedVowel[number] || 0) + 1;\n  });\n  return repeatedVowel;\n}\n\nconsole.log(getVowels('Hellow world'));\nconsole.log(getVowels('Javascript is cool'));\nconsole.log(getVowels('Top Gun Lab, is Great'));\n\n//# sourceURL=webpack://natours/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/main.scss */ \"./src/css/main.scss\");\n\n\n//# sourceURL=webpack://natours/./src/index.js?");
 
 /***/ }),
 

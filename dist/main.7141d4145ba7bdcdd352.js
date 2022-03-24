@@ -16,7 +16,17 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/main.scss */ \"./src/css/main.scss\");\n\n\n//# sourceURL=webpack://natours/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ICONFONT_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_ICONFONT/styles.css */ \"./src/_ICONFONT/styles.css\");\n/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/main.scss */ \"./src/css/main.scss\");\n\n\n\n//# sourceURL=webpack://natours/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/_ICONFONT/styles.css":
+/*!**********************************!*\
+  !*** ./src/_ICONFONT/styles.css ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://natours/./src/_ICONFONT/styles.css?");
 
 /***/ }),
 

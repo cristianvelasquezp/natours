@@ -1285,6 +1285,91 @@ body {
   opacity: 1;
 }
 
+.popup {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.popup__content {
+  width: 75%;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0.2);
+      -ms-transform: translate(-50%, -50%) scale(0.2);
+          transform: translate(-50%, -50%) scale(0.2);
+  opacity: 0;
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  display: table;
+  overflow: hidden;
+  -webkit-transition: all 0.4s 0.2s;
+  -o-transition: all 0.4s 0.2s;
+  transition: all 0.4s 0.2s;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup:target .popup__content {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.popup__left {
+  width: 33.333333%;
+  display: table-cell;
+}
+.popup__right {
+  width: 66.666667%;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 2rem 4rem;
+}
+.popup__text {
+  font-size: 1.4rem;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 3rem;
+     -moz-column-gap: 3rem;
+          column-gap: 3rem;
+  -webkit-column-rule: 1px solid #eee;
+     -moz-column-rule: 1px solid #eee;
+          column-rule: 1px solid #eee;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  margin-bottom: 4rem;
+}
+.popup__image {
+  display: block;
+  width: 100%;
+}
+.popup__close {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 3rem;
+  color: #777;
+  text-decoration: none;
+}
+.popup__close:hover {
+  color: #55c57a;
+}
+
 .header {
   height: 95vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(hero.15e5f60eb95486007f5a.jpg);

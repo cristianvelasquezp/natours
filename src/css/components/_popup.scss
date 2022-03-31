@@ -23,6 +23,11 @@
     display: table;
     overflow: hidden;
     transition: all .4s .2s;
+
+    @include respond(phone) {
+      display: block;
+    }
+
   }
 
   &:target {
@@ -38,6 +43,10 @@
   &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__right {
@@ -45,6 +54,8 @@
     display: table-cell;
     vertical-align: middle;
     padding: 2rem 4rem;
+
+    g
   }
 
   &__text {
